@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Monster Data Base</title>
+</head>
+<body>
+    <header>
+        <h1>Monster DB</h1>
+    </header>
+    <aside>
+        <div class="type">
+            <button class="type-btn" id="undead" value="Undead">Undead</button>
+            <button class="type-btn" id="animal" value="Animal">Animal</button>
+            <button class="type-btn" id="homunculus" value="Homunculus">Homunculus</button>
+        </div>
+        <div class="color">
+            <label for="monster color">Choose a color:</label>
+            
+            <select id="color-selector" name="monster color">
+    
+            </select>
+        </div>
+    </aside>
+    <article>
+        <h1>Number of Monsters</h1>
+        <div id="number-of-section">
+            <div class="number-of" id="number-of-undead">
+                <p>Number of undead</p>
+
+            </div>
+            <div class="number-of" id="number-of-animals">
+                <p>Number of animals</p>
+            </div>
+            <div class="number-of" id="number-of-homunculus">
+                <p>Number of homunculus</p>
+            </div>
+            <div class="number-of" id="number-of-brown">
+                <p>Number of brown</p>
+            </div>
+            <div class="number-of" id="number-of-blue">
+                <p>Number of blue</p>
+            </div>
+            <div class="number-of" id="number-of-red">
+                <p>Number of red</p>
+            </div>
+            <div class="number-of" id="number-of-green">
+                <p>Number of green</p>
+            </div>
+        </div>
+        <h1>Monster Cards</h1>
+        <!--Tillfällig, så jag har något att leka med i css-->
+        <div id="monster-cards">
+            
+
+        </div>
+        <!--------------------------------------------------->
+    </article>
+    <footer>
+            <!--Ett pop-up fönster för monster-formuläret-->
+            <button id="add-monster-button" onclick="hideAddMonsterButton()">Add New Monster</button>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div>Monster Info</div>
+                    <form id="monster-form">
+                        <div class="form">
+
+                            <label for="name">Name</label>
+                            <input type="text" id="monster-name" name="name" />
+                            <label for="monster-color">Color</label>
+                            
+                            <select id="form-color" name="monster-color">
+    
+                            </select>
+                            <label for="monster-type">Type</label>
+                            <select name="monster-type" id="type-picker">
+                                <option value="Undead">Undead</option>
+                                <option value="Animal">Animal</option>
+                                <option value="Homunculus">Homunculus</option>
+                            </select>
+                        </div>
+                        <input type="button" value="Submit" id="submit-new-monster" />
+                    </form>
+                    <!--En knapp där man kan stänga pop-up fönstret-->
+                    <button data-close-button id="close-button">&times;</button>
+                </div>
+            </footer>
+    <script src="monster.js"></script>
+</body>
+</html>
